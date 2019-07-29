@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Evaluate" table="Evaluate">
+
+          <!-- 主键评价编号 -->
+          <id name="evaluateId" column="evaluateId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 商品名称 -->
+          <many-to-one name="productObj"
+            column="productObj"
+            class="ProductInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 用户名 -->
+          <many-to-one name="memberObj"
+            column="memberObj"
+            class="MemberInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 评价内容 -->
+          <property
+            name="content"
+            column="content"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 评价时间 -->
+          <property
+            name="evaluateTime"
+            column="evaluateTime"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="MainMenuActivity"></activity>
+        <activity android:name="ProductClassListActivity"></activity>
+        <activity android:name="ProductClassQueryActivity"></activity>
+        <activity android:name="ProductClassAddActivity"></activity>
+        <activity android:name="ProductClassEditActivity"></activity>
+        <activity android:name="ProductClassDetailActivity"></activity>
+        <activity android:name="ProductInfoListActivity"></activity>
+        <activity android:name="ProductInfoQueryActivity"></activity>
+        <activity android:name="ProductInfoAddActivity"></activity>
+        <activity android:name="ProductInfoEditActivity"></activity>
+        <activity android:name="ProductInfoDetailActivity"></activity>
+        <activity android:name="YesOrNoListActivity"></activity>
+        <activity android:name="YesOrNoQueryActivity"></activity>
+        <activity android:name="YesOrNoAddActivity"></activity>
+        <activity android:name="YesOrNoEditActivity"></activity>
+        <activity android:name="YesOrNoDetailActivity"></activity>
+        <activity android:name="MemberInfoListActivity"></activity>
+        <activity android:name="MemberInfoQueryActivity"></activity>
+        <activity android:name="MemberInfoAddActivity"></activity>
+        <activity android:name="MemberInfoEditActivity"></activity>
+        <activity android:name="MemberInfoDetailActivity"></activity>
+        <activity android:name="OrderInfoListActivity"></activity>
+        <activity android:name="OrderInfoQueryActivity"></activity>
+        <activity android:name="OrderInfoAddActivity"></activity>
+        <activity android:name="OrderInfoEditActivity"></activity>
+        <activity android:name="OrderInfoDetailActivity"></activity>
+        <activity android:name="OrderStateListActivity"></activity>
+        <activity android:name="OrderStateQueryActivity"></activity>
+        <activity android:name="OrderStateAddActivity"></activity>
+        <activity android:name="OrderStateEditActivity"></activity>
+        <activity android:name="OrderStateDetailActivity"></activity>
+        <activity android:name="OrderDetailListActivity"></activity>
+        <activity android:name="OrderDetailQueryActivity"></activity>
+        <activity android:name="OrderDetailAddActivity"></activity>
+        <activity android:name="OrderDetailEditActivity"></activity>
+        <activity android:name="OrderDetailDetailActivity"></activity>
+        <activity android:name="ProductCartListActivity"></activity>
+        <activity android:name="ProductCartQueryActivity"></activity>
+        <activity android:name="ProductCartAddActivity"></activity>
+        <activity android:name="ProductCartEditActivity"></activity>
+        <activity android:name="ProductCartDetailActivity"></activity>
+        <activity android:name="EvaluateListActivity"></activity>
+        <activity android:name="EvaluateQueryActivity"></activity>
+        <activity android:name="EvaluateAddActivity"></activity>
+        <activity android:name="EvaluateEditActivity"></activity>
+        <activity android:name="EvaluateDetailActivity"></activity>
+        <activity android:name="NoticeListActivity"></activity>
+        <activity android:name="NoticeQueryActivity"></activity>
+        <activity android:name="NoticeAddActivity"></activity>
+        <activity android:name="NoticeEditActivity"></activity>
+        <activity android:name="NoticeDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+    </application>
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission>
+	
+	
+</manifest>

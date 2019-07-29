@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="OrderInfo" table="OrderInfo">
+
+          <!-- 主键订单编号 -->
+          <id name="orderNo" type="string" length="20">
+            <generator class="assigned"/>
+          </id>
+
+          <!-- 多对一属性: 下单会员 -->
+          <many-to-one name="memberObj"
+            column="memberObj"
+            class="MemberInfo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 下单时间 -->
+          <property
+            name="orderTime"
+            column="orderTime"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单浮点型属性: 订单总金额 -->
+          <property
+            name="totalMoney"
+            column="totalMoney"
+            type="float"
+          />
+
+          <!-- 多对一属性: 订单状态 -->
+          <many-to-one name="orderStateObj"
+            column="orderStateObj"
+            class="OrderState"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 付款方式 -->
+          <property
+            name="buyWay"
+            column="buyWay"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 收货人姓名 -->
+          <property
+            name="realName"
+            column="realName"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 收货人电话 -->
+          <property
+            name="telphone"
+            column="telphone"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 邮政编码 -->
+          <property
+            name="postcode"
+            column="postcode"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 收货地址 -->
+          <property
+            name="address"
+            column="address"
+            type="string"
+            length="80"
+          />
+
+          <!-- 简单字符串属性: 附加信息 -->
+          <property
+            name="memo"
+            column="memo"
+            type="string"
+            length="50"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

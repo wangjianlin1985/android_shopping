@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="ProductInfo" table="ProductInfo">
+
+          <!-- 主键商品编号 -->
+          <id name="productNo" type="string" length="20">
+            <generator class="assigned"/>
+          </id>
+
+          <!-- 多对一属性: 商品类别 -->
+          <many-to-one name="productClassObj"
+            column="productClassObj"
+            class="ProductClass"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 商品名称 -->
+          <property
+            name="productName"
+            column="productName"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单图片属性: 商品图片 -->
+          <property
+            name="productPhoto"
+            column="productPhoto"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单浮点型属性: 商品单价 -->
+          <property
+            name="productPrice"
+            column="productPrice"
+            type="float"
+          />
+
+          <!-- 简单整型属性: 商品库存 -->
+          <property
+            name="productCount"
+            column="productCount"
+            type="int"
+
+          />
+
+          <!-- 多对一属性: 是否推荐 -->
+          <many-to-one name="recommendFlag"
+            column="recommendFlag"
+            class="YesOrNo"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单整型属性: 人气值 -->
+          <property
+            name="hotNum"
+            column="hotNum"
+            type="int"
+
+          />
+
+          <!-- 简单日期型属性: 上架日期 -->
+          <property
+            name="onlineDate"
+            column="onlineDate"
+            	type="timestamp"
+            	length="10"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 
